@@ -13,7 +13,7 @@ function linkGenerator() {
 }
 
 
-// Add event listener to the form to prevent submission on page load
+// Add event listener to the form to prevent submission on page load   
 document.getElementById("linkGeneratorForm").addEventListener("submit", function(event) {
   event.preventDefault();
 });
