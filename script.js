@@ -28,3 +28,10 @@ function valGet() {
   navigator.clipboard.writeText(anchorTag)
   document.getElementById("message").style.display = "block";
 }
+
+
+function valClear()
+{
+  document.getElementById("webLink").value = "";
+  document.getElementById("websiteName").value = "";
+}
