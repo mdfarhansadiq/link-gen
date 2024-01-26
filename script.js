@@ -4,7 +4,7 @@ function linkGenerator() {
   var websiteLink = document.getElementById("webLink").value;
   var websiteName = document.getElementById("websiteName").value;
   var checkHttps = websiteLink.slice(0, 8);
-
+  //
   if (checkHttps === "https://") {
     anchorTag =
       '<a href="' + websiteLink + '" target="_blank">' + websiteName + "</a>";
