@@ -9,31 +9,25 @@ function linkGenerator() {
     anchorTag =
       '<a href="' + websiteLink + '" target="_blank">' + websiteName + "</a>";
   } else {
-    anchorTag =
-      '<a href="https://' +
-      websiteLink +
-      '" target="_blank">' +
-      websiteName +
-      "</a>";
+    anchorTag = '<a href="https://' + websiteLink + '" target="_blank">' + websiteName + '</a>';
   }
 
   if (websiteLink != "" && websiteName != "") {
     document.getElementById("warning").style.display = "none";
     document.getElementById("copyBtn").style.display = "block";
-  }
-  else
-  {
+  } else {
     document.getElementById("warning").style.display = "block";
   }
   document.getElementById("webAnchor").innerHTML = anchorTag;
 }
-
 // Add event listener to the form to prevent submission on page load
 document
   .getElementById("linkGeneratorForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
   });
+
+
 
 function valGet() {
   navigator.clipboard.writeText(anchorTag);
@@ -43,6 +37,7 @@ function valGet() {
 function valClear() {
   document.getElementById("copyBtn").style.display = "none";
   document.getElementById("message").style.display = "none";
+
   document.getElementById("webLink").value = "";
   document.getElementById("websiteName").value = "";
 }
