@@ -33,7 +33,7 @@ input, textarea {
   box-sizing: border-box;
 }
 
-button {
+.button-1 {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 15px;
@@ -45,10 +45,27 @@ button {
   align-items: center;
 }
 
-button:hover {
+
+.button-2 {
+  background-color: #de0000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-1:hover {
   background-color: #45a049;
 }
 
+
+.button-2:hover {
+  background-color: #e00000;
+}
 
 .center-container {
   display: flex;
@@ -56,7 +73,16 @@ button:hover {
   align-items: center;
 }
 
-.centered-button {
+.centered-button-1 {
+  padding: 10px 20px; /* Adjust the padding as needed */
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  cursor: pointer;
+}
+
+.centered-button-2 {
   padding: 10px 20px; /* Adjust the padding as needed */
   background-color: #4CAF50; /* Green background color */
   color: white; /* White text color */
