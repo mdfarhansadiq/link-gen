@@ -47,7 +47,7 @@ input, textarea {
 
 
 .button-2 {
-  background-color: #de0000;
+  background-color: #ca0e0ecb;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -64,7 +64,7 @@ input, textarea {
 
 
 .button-2:hover {
-  background-color: #e00000;
+  background-color: #dc0707e1;
 }
 
 .center-container {

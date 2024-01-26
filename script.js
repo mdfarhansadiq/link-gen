@@ -1,37 +1,48 @@
-var anchorTag = '';
-
+var anchorTag = "";
 
 function linkGenerator() {
   var websiteLink = document.getElementById("webLink").value;
   var websiteName = document.getElementById("websiteName").value;
   var checkHttps = websiteLink.slice(0, 8);
+
   if (checkHttps === "https://") {
-    anchorTag = '<a href="' + websiteLink + '" target="_blank">' + websiteName + '</a>';
+    anchorTag =
+      '<a href="' + websiteLink + '" target="_blank">' + websiteName + "</a>";
+  } else {
+    anchorTag =
+      '<a href="https://' +
+      websiteLink +
+      '" target="_blank">' +
+      websiteName +
+      "</a>";
   }
-  else {
-    anchorTag = '<a href="https://' + websiteLink + '" target="_blank">' + websiteName + '</a>';
+
+  if (websiteLink != "" && websiteName != "") {
+    document.getElementById("warning").style.display = "none";
+    document.getElementById("copyBtn").style.display = "block";
   }
-  document.getElementById("copyBtn").style.display = 'block';
+  else
+  {
+    document.getElementById("warning").style.display = "block";
+  }
   document.getElementById("webAnchor").innerHTML = anchorTag;
-  
 }
 
-
 // Add event listener to the form to prevent submission on page load
-document.getElementById("linkGeneratorForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-});
-
-
+document
+  .getElementById("linkGeneratorForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
 
 function valGet() {
-  navigator.clipboard.writeText(anchorTag)
+  navigator.clipboard.writeText(anchorTag);
   document.getElementById("message").style.display = "block";
 }
 
-
-function valClear()
-{
+function valClear() {
+  document.getElementById("copyBtn").style.display = "none";
+  document.getElementById("message").style.display = "none";
   document.getElementById("webLink").value = "";
   document.getElementById("websiteName").value = "";
 }
